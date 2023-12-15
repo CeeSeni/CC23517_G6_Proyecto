@@ -1,25 +1,112 @@
-{% extends "core/base.html" %}
-{% block title %}Acerca de{% endblock %}
-{% block background %}{% load static %}{% static 'core/img/about-bg.jpg' %}{% endblock %}
-{% block headers %}
-<h1>Acerca de</h1>
-	<span class="subheading">Integrantes</span>
-{% endblock headers %}
-{% block content %}
-{% for integrante  in integrantes %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="../img/DeporMLOGO.ico" type="image/x-icon">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../css/contact.css">
+    <title>Document</title>
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg bg-body-tertiary">
+    <div class="container-fluid">
+        <a class="navbar-brand" href="../index.html">
+            <img src="../img/DeporMLOGO.ico" alt="Logo" width="73" height="70" class="d-inline-block align-text-top">
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" aria-current="page" href="../index.html">Inicio</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Intistucional.html">Institucional</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Socios.html">Socios</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="Indumentaria.html">Indumentaria</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="contact.html">Contacto</a>
+                </li>
+            </ul>
+            <form class="d-flex" role="search">
+                <input class="form-control me-2" type="search" placeholder="Buscar" aria-label="Search">
+                <button class="btn btn-outline-success" type="submit">Buscar</button>
+            </form>
+        </div>
+    </div>
+</nav>
+
+<h1>MEDIOS DE CONTACTO</h1>
+
+<h1>Contacto</h1>
+<span class="subheading">Consultoria</span>
+
+<h1>Contacto</h1>
+<span class="subheading">Consultoria</span>
+
 <div class="container">
 	<div class="row">
-<div class="col-lg-3 col-md-4 offset-lg-1">
-	{{indu.image.url}}
-	<img class="img-fluid avatar" src="{{integrante.image.url}}" alt="">
-	{% comment %} <img class="img-fluid avatar" src="{% static 'core/img/Perfil1.png' %}" alt=""> {% endcomment %}
+	  <div class="col-lg-8 col-md-10 mx-auto">
+		<p><b>Teléfono:</b> +54 379 47255555</p>
+	
+		<p><b>email: </b>{{integrante.email}}</p>	
+	  </div>
+	</div>
+	
+	<div class="col-lg-8 col-md-10 mx-auto">
+		<p><b>Sede social: </b> Catamarca 1056 </p>
+		<iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3539.9873586447793!2d-58.83591922614607!3d-27.469652916701232!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94456ca17378f7ef%3A0xbc7b529d3a5f4a5c!2sCatamarca%201050%2C%20W3400CEP%20Corrientes!5e0!3m2!1ses!2sar!4v1702522234839!5m2!1ses!2sar"
+		 width="700" height="300" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
 </div>
-<div class="col-lg-7 col-md-8">
-	<h2 class="section-heading">{{integrante.apellido}} {{integrante.nombre}}</h2>   
-	<p>{{integrante.descripcion}}</p>
-</div>
-</div>  
-{% endfor %}
-{% comment %} <h2>Acerca de</h2><p>Soy Enzo Ramirez</p> {% endcomment %}
-{% endblock  %}
+  </div> 
 
+<div class="container">
+    <h2>Contacto</h2>
+
+    <div class="form-group">
+        <label for="nombre">Nombre:</label>
+        <input type="text" id="nombre" name="nombre" required>
+    </div>
+    <div class="form-group">
+        <label for="apellido">Apellido:</label>
+        <input type="text" id="apellido" name="apellido" required>
+    </div>
+
+    <div class="form-group">
+        <label for="email">Correo electrónico:</label>
+        <input type="email" id="email" name="email" required>
+    </div>
+
+    <div class="form-group">
+        <label for="mensaje">Mensaje:</label>
+        <textarea id="mensaje" name="mensaje" rows="6" required></textarea>
+    </div>
+
+    <div class="form-group">
+        <button type="submit">Enviar</button>
+    </div>
+</div>
+
+<footer>
+    <nav id="redes">
+        <ul style="list-style: none;">
+            <li><a href="https://www.instagram.com/mandiyucorrientes/">Instagram</a></li>
+            <li><a href="https://www.twitter.com/mandiyu1952/">Twitter</a></li>
+            <li><a href="https://www.facebook.com/cdmandiyucorrientes/">Facebook</a></li>
+            <li><a href="https://www.tiktok.com/@deportivomandiyu?_t=8c4Mt7bDw9d&_r=1">TikTok</a></li>
+            <li><a href="https://www.youtube.com/watch?v=IFKiyksHMAo&ab_channel=Sentatequetecuento">Youtube</a></li>
+        </ul>
+    </nav>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-C6RzsynM9kWDrMNeT87bh95OGNyZPhcTNXj1NW7RuBCsyN/o0jlpcV8Qyq46cDfL" crossorigin="anonymous"></script>
+</body>
+</html>
